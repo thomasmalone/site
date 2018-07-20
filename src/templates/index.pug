@@ -1,0 +1,397 @@
+extends partials/_layout
+append head
+    +header({
+        "type": "home",
+        "title": "Veridium", 
+        "metadescription": "An eco based blockchain.", 
+        "img": "https://mevu.bet/images/logo_square.png", 
+        "url": "http://www.veridium.io",
+        "ld": { 
+            "@context": "http://schema.org",
+            "@type": "WebSite",  
+            "url": "https://www.veridium.io/"
+        }   
+    }) 
+block vars 
+  - var type = 'index' 
+block content
+    section#hero   
+        #hero-svg-1
+            include ./assets/hero.svg
+        #hero-svg-2
+            include ./assets/hero-2.svg
+        .container   
+            hgroup#hero-title
+                h1 Seamlessly reduce the world’s carbon footprint
+                p Veridium is collaborating with IBM to transform how carbon credits work
+            #hero-content 
+                #hero-content-inner
+                    small.subtitle Token buyer registration
+                    form.inline(action="")
+                        input(type="text")
+                        button() Submit
+    section#affiliates
+        .container
+            hgroup
+                small.subtitle Our partners
+            ul
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg 
+    section#about
+        .container
+            hgroup
+                h2 Introducing Veridium
+                p Veridium is a collaborative initiative to create a regenerative economy that sustains our planet’s natural resources and reduces carbon emissions.
+                p The system we’re building turns industry-standard carbon offsets into freely tradeable tokenized assets. With our partners, we are creating a marketplace that will automate the corporate carbon credit accounting and offsetting process across global supply chains.
+
+            .btn-group
+                button.primary Join Token Sale
+                button.secondary View Case Study
+    section#desc
+        .container  
+            #desc-art   
+                include ./assets/bear.svg 
+            #desc-content 
+                include ./assets/blob-desc.svg   
+                hgroup
+                    h2 Nature needs us
+                    p Our society currently faces one of the most pressing challenges of our time.
+                    p Companies and consumers are beginning to understand the value of the earth’s finite resources, including clean air, forests, arable land, clean water and the communities that rely on them. 
+                    p Environmental offsets such as carbon credits are a solution to reversing the environmental destruction that we have levied through years of an extractive economic model. We propose a regenerative model that constantly renews the earth of the resources it provides us.
+                ul#desc-list
+                    li
+                        h6 The problem
+                        p Carbon credits haven’t worked because they are illiquid, difficult to track, hard to calculate, lack transparency, and are not standardized.
+                    li
+                        h6 Our solution
+                        p Veridium makes carbon credit usage viable with the world’s first blockchain-based exchange and protocol.
+    section#ecosystem
+        .container
+            hgroup
+                h2 Our ecosystem
+                p We are bringing to market the Veridium Exchange and EcoSmart protocol to facilitate our mission of creating a sustainable, carbon-neutral world.
+            ul#ecosystem-list
+                li
+                    include ./assets/ecosystem-1.svg
+                    h6 Veridium Exchange
+                    p Veridium Exchange is the first tokenized exchange unleashing new liquidity and trading opportunities in carbon markets.
+                li
+                    include ./assets/ecosystem-2.svg 
+                    h6 Ecosmart Protocol
+                    p EcoSmart is a protocol that allows companies to seamlessly offset the environmental impact of their activities.
+    section#news
+        include ./assets/blob-news.svg
+        .container
+            hgroup
+                h2 In the press
+                p We are bringing to market the Veridium Exchange and EcoSmart protocol to facilitate our mission of creating a sustainable, carbon-neutral world.
+            ul
+                li.news-article
+                    //- include ./assets/logo-forbes.svg 
+                    .news-article-desc
+                        h6 Bloomberg
+                        p Blockchain Fan IBM Helps Issue a Digital Coin for First
+                        a(href='https://bloom.bg/2ImVaYB')
+                            button.secondary.iconed-rt
+                                div
+                                    span Read more 
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 TechCrunch
+                        p Veridium Labs teams with IBM and Stellar on carbon credit blockchain
+                        a(href='https://tcrn.ch/2wHE7zd')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 CoinDesk
+                        p IBM Is Helping Build a Carbon Credit Blockchain Token
+                        a(href='https://bit.ly/2rHeNnY')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 CNBC
+                        p IBM joins forces with a start-up to combine crypto with environmental credit trading
+                        a(href='https://cnb.cx/2GibXdA')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 Forbes
+                        p IBM To Use Stellar For Its First Crypto-Token On A Public Blockchain
+                        a(href='https://bit.ly/2jWy9B4')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 CNET
+                        p Blockchain alliance aims to track carbon credits to fight climate change
+                        a(href='https://cnet.co/2rDFM3R')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 MarketWatch
+                        p IBM and Veridium Labs partner to use blockchain technology to improve carbon-credit markets
+                        a(href='https://on.mktw.net/2IhtFnf')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 SeekingAlpha
+                        p Veridium to use IBM blockchain to turn carbon credits into digital asset
+                        a(href='https://bit.ly/2KrN15Y')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 CoinTelegraph
+                        p IBM Partners With Veridium Labs To Let Companies Track Carbon Footprint Via Blockchain
+                        a(href='https://bit.ly/2rIi4Dt')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 PCMag
+                        p New Partnerships From IBM and SAP
+                        a(href='https://bit.ly/2rI6B74')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 CCN
+                        p IBM to Issue Cryptocurrency Token on Public Stellar Blockchain
+                        a(href='https://bit.ly/2GgMktq')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 Hacked
+                        p  IBM to Launch Cryptocurrency on Stellar Blockchain 
+                        a(href='https://bit.ly/2IGELBP')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                li.news-article
+                    .news-article-desc
+                        h6 Investing
+                        p  IBM Partners With Veridium Labs To Let Companies Track Carbon Footprint Via Blockchain 
+                        a(href='https://bit.ly/2IjiKJX')
+                            button.secondary.iconed-rt
+                                div 
+                                    span Read more
+                                    .icon-chevrons-right
+                                        
+            //- #news-content 
+                #news-content-main
+                    small.subtitle News article 1
+                    p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut 
+                #news-content-aside
+                    .news-article
+                        small.subtitle News article 1
+                        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+                    .news-article
+                        small.subtitle News article 1
+                        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+                    .news-article
+                        small.subtitle News article 1
+                        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+                    .news-article
+                        small.subtitle News article 1
+                        p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+    section#team
+        .container   
+            hgroup
+                h2 Team
+            ul#team-members 
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#todd')
+                    .team-member-desc
+                        h6  Tood Lemons
+                        p Chairman
+                        .team-members-icons
+                            .icon-linkedin
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#team-jim')
+                    .team-member-desc
+                        h6 Jim Procanik
+                        p Executive Director
+                        .team-members-icons
+                            .icon-linkedin
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#team-neslihan')
+                    .team-member-desc
+                        h6 Neslihan Feradov
+                        p Director of Strategic Partnerships &amp; Marketing
+                        .team-members-icons
+                            .icon-linkedin
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#team-michael')
+                    .team-member-desc
+                        h6 Michael Sofaer
+                        p Interim CTO
+                        .team-members-icons
+                            .icon-linkedin
+                            .icon-github
+        #advisors.container   
+            include ./assets/blob-advisors.svg
+            hgroup
+                h2 Advisors
+            ul#advisors-members
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        p  Tood Lemons
+                        small.subtitle CEO / Co-founder 
+                        .team-members-icons
+                            .icon-github
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')  
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons
+                            .icon-github
+                            .icon-github 
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons
+                            .icon-github
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons 
+                            .icon-github
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons 
+                            .icon-github
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons 
+                            .icon-github 
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons 
+                            .icon-github
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons 
+                            .icon-github
+                            .icon-github
+                li.team-member
+                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-desc
+                        small.subtitle Todd Lemons
+                        .team-members-icons   
+                            .icon-github 
+                            .icon-github
+    section#extended
+        //- include ./assets/blob-top.svg
+        //- include ./assets/blob-bottom.svg
+        .container
+            #extended-content 
+                #extended-content-main
+                    hgroup
+                        h2 Our carbon mission
+                        p "Carbon credits are issued only after emissions reductions have been verified by internationally-recognized third party auditors. They are consequently the most viable market-based solution to a sustainable economy."
+                        small.subtitle —Todd Lemons, CEO
+                #extended-content-aside
+                    .extended-article
+                        //- small.subtitle News article 1
+                        p Carbon credits reduce our CO2 emissions 
+                    .extended-article
+                        //- small.subtitle News article 1
+                        p Carbon credits protect rainforests
+                    .extended-article
+                        //- small.subtitle News article 1
+                        p Carbon credits are increasingly required by governments
+                    .extended-article
+                        //- small.subtitle News article 1
+                        p Carbon credits help companies offset CO2 emissions
+    section#whitepaper
+        .container
+            #whitepaper-content 
+                #whitepaper-content-main
+                    hgroup
+                        h2 Read our whitepaper
+                        p Understand why Veridium is a solution to the world’s biggest problem.
+                    hr
+                    #whitepaper-content-aside
+                        .news-article
+                            h6 Whitepaper
+                            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+                            .btn-group
+                                button.primary
+                                    span Download whitepaper
+                        .news-article
+                            h6 Lightpaper
+                            p Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt 
+                            .btn-group
+                                button.primary
+                                    span Download lightpaper
+                    //- .btn-group
+                        button.primary
+                            span Whitepaper
+                        button.secondary
+                            span Lightpaper 

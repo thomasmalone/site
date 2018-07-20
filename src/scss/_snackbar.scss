@@ -1,0 +1,39 @@
+@import '_vars';
+@import '_mixins';
+
+#snackbar {
+    cursor: pointer;
+    @include flex();
+    @include justify-content(center);    
+    background: darkred;
+    color: white;
+    padding: .5rem;
+    width: 100%;
+    position: absolute;
+    transition: all .25s linear;
+    top: 0;
+    z-index: 10;
+    &.hide {
+        top: -50px
+    }   
+    .icon-x {
+        font-size: 12px;
+        margin-right: 1rem;
+    }
+    > * {
+        color : white
+    }
+}
+
+main {
+    &[data-show-nav=true] {
+        #snackbar {
+            // left: 300px
+        }
+        &[data-nav-minified=true] {
+            #snackbar {
+                left: 80px
+            }
+        }
+    }
+}

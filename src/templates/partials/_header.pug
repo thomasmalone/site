@@ -1,0 +1,26 @@
+mixin header(data)
+  doctype html
+  head
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name='keywords', content='Prism, Photography, Photos')
+    title #{data.title}
+    <script type="text/javascript" src="https://embed.typeform.com/embed.js"></script>
+    link(rel='stylesheet', type='text/css', href='/static/scss/index.css', async)
+    meta(name='description', content=data.metadescription)
+    meta(property='og:url', content=data.url)
+    meta(property='fb:app_id', content='356184997881243')
+    meta(property='og:type', content='website') 
+    meta(property='og:title', content=data.title)
+    meta(property='og:description', content=data.metadescription)
+    meta(property='og:image', content=data.img)
+    meta(itemprop='name', content=data.title)
+    meta(itemprop='description', content=data.metadescription)
+    meta(itemprop='image', content=data.img)
+    meta(name='twitter:card', content='summary_large_image')
+    meta(name='twitter:title', content=data.title) 
+    meta(name='twitter:description', content=data.metadescription)
+    meta(name='twitter:image', content=data.img) 
+    script. 
+      // FB PX 
+    //- Can insert json LD here
+    script(type="application/ld+json") !{JSON.stringify(data.ld)}

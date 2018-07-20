@@ -1,0 +1,12 @@
+@import './vars';
+//———————————————————————————
+//
+//
+// Functions
+//
+//
+//———————————————————————————
+  
+@function getColor($c, $opacity){
+    @return (rgba($c, $opacity)); 
+} 

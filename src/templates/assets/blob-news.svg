@@ -1,0 +1,18 @@
+<svg id="176b0722-fa5b-4e21-9dfb-dd8bae9d958c" data-name="Layer 1" 
+    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1947 1150.25">
+    <title>blob-news</title>
+    <defs>
+        <filter id="inset-shadow">
+            <feOffset dx="0" dy="0"/>                                                         <!-- Shadow Offset -->
+            <feGaussianBlur stdDeviation="60"  result="offset-blur"/>                           <!-- Shadow Blur -->
+            <feComposite operator="out" in="SourceGraphic" in2="offset-blur" result="inverse"/> <!-- Invert the drop shadow to create an inner shadow -->
+            <feFlood flood-color="#142732" flood-opacity="1" result="color"/>                     <!-- Color & Opacity -->
+            <feComposite operator="in" in="color" in2="inverse" result="shadow"/>               <!-- Clip color inside shadow -->
+            <feComponentTransfer in="shadow" result="shadow">                                   <!-- Shadow Opacity -->
+                <feFuncA type="linear" slope=".75"/>
+            </feComponentTransfer>
+            <feComposite operator="over" in="shadow" in2="SourceGraphic"/>                       <!-- Put shadow over original object -->
+        </filter>
+    </defs>
+    <path filter='url(#inset-shadow)' d="M183.42,45.71c83.57-6.28,90.78,120.18,208.5,178.5C694.17,374,1002-42.39,1367.42,93.71c71.94,26.8,147.3,75.45,250,54,134.47-28.07,201.23-161.25,226-146,39.45,24.28-177.92,315.19-76,506,44.81,83.88,108.48,68.12,152,154,92,181.47-70.72,491.73-184,488-49.78-1.64-63-63.41-146-162-96.72-114.88-234.67-231-352-260-315.88-78.09-508.87,251.37-840,152-108.89-32.68-180.07-103-214-136C149.84,711.05-24,542,3.42,319.71,18,201.73,91.24,52.64,183.42,45.71Z" style="stroke-miterlimit:10;fill:#233a47"/>
+</svg>

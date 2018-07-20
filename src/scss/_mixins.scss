@@ -1,0 +1,187 @@
+@import './_vars';
+
+//———————————————————————————
+//
+//  
+// Mixins
+//
+//
+//——————————————————————————— 
+@mixin brightContainer() {
+	h1,h2,h3,h4,h5,h6 {
+		color: white
+	}
+	button {
+		color: white;
+	}
+	p,small {
+
+	} 
+}
+@mixin darkContainer () {
+	h1,h2,h3,h4,h5,h6 {
+		color: white
+	}
+	button {
+		color: white;
+		&.primary {
+			color: white;
+		}
+		&.tri {
+			color: white;
+		}
+	} 
+	p,small {
+		color: white
+	} 
+} 
+@mixin slider($id) {
+	@for $i from 0 through 14 {
+		#{$id}[data-index='#{$i}'] {
+			.clickables {
+				>:nth-child(#{$i + 1}) {
+					transition: all .25s linear;
+					@content
+				}
+			}
+		}
+	}
+}
+
+@mixin keyframes($name) {
+	@-webkit-keyframes #{$name} {
+		@content; 
+	}
+	@-moz-keyframes #{$name} {
+		@content;
+	} 
+	@-ms-keyframes #{$name} {
+		@content;
+	}  
+	@keyframes #{$name} {
+		@content;
+	} 
+}
+ 
+@mixin animate($value) {
+    -webkit-animation: $value;
+    -moz-animation: $value;
+	-o-animation: $value;
+	animation: $value;
+}
+
+@mixin box($color) {    
+	background: white;
+	border-radius: $border-radius;
+	box-shadow: 0 15px 73px -10px #d6eeff;
+}
+
+@mixin invert() {
+	color: white;
+	* {
+		color: white;
+	}
+	.subtitle {
+		opacity: .7
+	}
+	.subtle {
+		opacity: .5
+	}
+}
+
+@mixin fillColor($colorStr, $opacity) {
+	fill: getColor($colorStr, $opacity);
+}
+
+@mixin justify-content($value) {
+  -webkit-box-pack: $value;
+  -webkit-justify-content: $value;
+      -ms-flex-pack: $value;
+          justify-content: $value;
+}
+
+@mixin align-items($value) {
+	-ms-flex-align: $value; // IE10
+	-webkit-box-align: $value;
+	-webkit-align-items: $value; // Safari / iOS
+	align-items: $value;
+}
+
+@mixin align-self($value) {
+	-ms-flex-self: $value; // IE10
+	-webkit-box-self: $value;
+	-webkit-align-self: $value; // Safari / iOS
+	align-self: $value;
+}
+
+
+@mixin flex-direction($value) {
+	-ms-flex-direction: $value; // IE10
+	-webkit-flex-direction: $value; // Safari / iOS
+	flex-direction: $value;
+}
+
+@mixin flex-wrap($value) {
+	-ms-flex-wrap: $value;
+	-webkit-flex-wrap: $value; // Safari / iOS
+	flex-wrap: $value;
+}
+
+@mixin flex-child($value) {
+
+  -webkit-box-flex: $value;   /* OLD - iOS 6-, Safari 3.1-6 */
+  -webkit-flex: $value;       /* Safari 6.1+. iOS 7.1+, BB10 */
+  -ms-flex: $value;  
+  flex: $value;
+}
+
+@mixin flex() {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox; 
+    display: flex;
+}
+
+@mixin grid() {
+	-ms-grid: grid;
+	display: grid;
+}
+
+@mixin transform($value) {
+
+	-webkit-transform: $value; /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+	-ms-transform: $value; /* IE 9 */
+		transform: $value; /* IE 10, Fx 16+, Op 12.1+ */
+
+}
+
+@mixin filter($value) {
+
+	-webkit-filter: $value;
+	filter: $value;
+
+}
+
+@mixin pseudo() {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+}
+
+@mixin title() {
+	// color: $color-secondary-subtle-2;
+}
+
+
+@function subtitle(){
+	@return $color-1;
+}
+@mixin subtitle() {
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: subtitle();
+	font-weight: 800;
+}

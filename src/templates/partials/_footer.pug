@@ -1,0 +1,130 @@
+mixin footer(opts)
+    aside#todd.hidden.modal
+        .modal-header
+            .icon-x.primary.modal-close-btn(data-close='#todd')
+        .modal-inner
+            p For the last 28 years, Todd has been a recognized specialist in the market development of natural resources in emerging markets with a particular focus on environmentally low impact projects. Todd has a demonstrated track record of identifying undervalued and underperforming assets in natural resource environments, particularly those in developing countries, and has led multiple ventures that materialize their untapped value. He has lived, worked and built successful companies in South America and Asia for more than 25 years including projects in Guyana, Chile, Bolivia, Brazil, Mexico, Malaysia, Indonesia, Thailand and China. The companies that Todd founded includeEnvision Corp. (an incubator for sustainable technology companies),Composite Technologies (an environmental engineering company that develops, produces and distributes environmentally low-impact “green” building products to corporations including: The Home Depot, Lowes and Masonite/Stanley Door and Jeld-Wen Window and Door),Infinite Earth (author of the first forest carbon accounting methodology for REDD+, which is now a mechanism embodied in the Paris Agreement, development of the first REDD+ project under the VCS/CCBA standards, and owner of the largest privately funded orangutan reserve in the world) andVeridium (an environmental blockchain company that powers sustainable supply chain solutions).
+    aside#team-jim.hidden.modal
+        .modal-header
+            .icon-x.primary.modal-close-btn(data-close='#team-jim')
+        .modal-inner
+            p Jim is the co-founder of InfiniteEarth, a company dedicated to developing and managing tropical conservation land banks and provides environmental offsets and private label CSR solutions to companies across the globe. Along with Todd Lemons, Jim helped develop the first validated REDD+ project ever under the VCS and helped define the criteria by which all projects are measured. After spending 5 years as InfiniteEarth’s Managing Director, Jim founded Green Projects, Inc., a company developing new consumer behavior models through disruptive sustainable retail concepts. Jim has also spent more than two decades growing startup businesses in the Entertainment & Fashion industries in Los Angeles, New York and Shanghai. Jim’s businesses have boasted a prestigious list of clients including Nickelodeon, Universal Studios, and NBC, as well as Macy’s, Bloomingdale’s, Saks Fifth Avenue, and Neiman Marcus. 
+    aside#team-neslihan.hidden.modal
+        .modal-header
+            .icon-x.primary.modal-close-btn(data-close='#team-neslihan')
+        .modal-inner
+            p Neslihan has held executive positions in ABB, New York City and Unilever, Dubai where she advised and spearheaded various business development and marketing strategies with a heavy focus on sustainability. Neslihan has worked within the Ministry of Energy in Ankara, Turkey whereby she helped execute various renewable energy and sustainability strategies with department heads of several ministries, including the office of the prime minister. Neslihan was also the co-founder of Kairos Society UK chapter, a global community of top entrepreneurs (including Forbes 30 under 30) and leaders aimed to solve the world’s greatest challenges. Neslihan graduated with a Master’s degree in Environmental Change and Management from Oxford University and completed her dissertation under the supervision of one of the leading thinkers of the green movement, Dr. Ben Caldecott within the Stranded Assets Program. She successfully executed her dissertation project in rural villages with direct support from the CEO of one the largest coal thermal power plant companies in India. Besides her professional accomplishments, Neslihan has completed 2 marathons, is an avid triathlete, Oxford-Cambridge Club Member and a Young Leader at the Robert F. Kennedy Human Rights Foundation. 
+    aside#team-michael.hidden.modal
+        .modal-header
+            .icon-x.primary.modal-close-btn(data-close='#team-michael')
+        .modal-inner
+            p Michael is the CTO of Brian Kelly Capital Management and Interim CTO for Veridium, a digital asset hedge fund. He co-founded Pings (a Knight-grantee Ripple currency for charities), was CIO of Tradehill (an early US-based Bitcoin exchange), a cofounder of Inigral (a Facebook app for education), and an engineer at ModelN, Pivotal Labs, and CloudFlare. 
+    aside#typeform.modal.hidden
+        .modal-header
+        .modal-inner
+            iframe(id="typeform-full" width="100%" height="100%" frameborder="0" src="https://jaronlukasiewicz.typeform.com/to/W5vFjX")
+    script(src='/static/index.js')
+    footer 
+        //- #social-wrap
+            ul#social
+                a(href='https://www.facebook.com/veridiumlabs/')
+                    .icon-facebook
+                a(href='https://t.me/veridiumlabs')
+                    .icon-telegram
+                a(href='https://twitter.com/veridiumlabs')
+                    .icon-twitter
+                a(href='https://www.linkedin.com/company/25057971/')
+                    .icon-linkedin
+                a(href='https://vimeo.com/veridiumlabs')
+                    .icon-vimeo
+        #footer-svg-wrap
+            include ../assets/footer.svg
+        .container
+            #footer-cta
+                hgroup
+                    h2 Be part of our mission
+                    p We’re here to answer your questions.
+                .btn-group
+                    button.secondary.iconed-rt
+                        div
+                            span hello@veridium.io
+                            .icon-email 
+                    button.secondary.iconed-rt
+                        div
+                            span Join our newsletter
+                            .icon-email
+                hr
+                ul#social
+                    a(href='https://www.facebook.com/veridiumlabs/')
+                        .icon-facebook
+                    a(href='https://t.me/veridiumlabs')
+                        .icon-telegram
+                    a(href='https://twitter.com/veridiumlabs')
+                        .icon-twitter
+                    a(href='https://www.linkedin.com/company/25057971/')
+                        .icon-linkedin
+                    a(href='https://vimeo.com/veridiumlabs')
+                        .icon-vimeo
+                
+                //- #footer-form
+                    small.subtitle Sign up to receive investor updates
+                    form.inline(action="")
+                        input(type='text' placeholder='Enter your email')
+                        button.primary
+                            div
+                                span Submit
+            //- #footer-container-newsletter
+                #footer-container-newsletter-content
+                    small Sign up for our newsletter
+                    form.inline(action="")
+                        input(type='text' placeholder='Enter your email..')
+                        button.primary()
+                            | Submit
+                hr
+            //- #footer-company 
+                //- img(src='/static/img/logo.png' style='max-width: 150px')
+                //- small Betting redefined
+            //- #footer-links-row-1.footer-links-row
+                small The Platform
+                ul
+                    li 
+                        a(href='#whitepaper') Whitepaper
+                    li 
+                        a(href='#about') Explainer Video
+                    li 
+                        a(href='#one-pager') One-pager
+                    li 
+                        a(href='#pitch-deck') Pitch Deck
+                    li 
+                        a(href='#') Timeline
+            //- #footer-links-row-2.footer-links-row
+                small Platform
+                ul
+                    li 
+                        a() About
+                    li 
+                        a() Platform 
+                    li 
+                        a() Team
+                    li 
+                        a() Partners
+                    li 
+                        a() Affiliates
+            //- #footer-links-row-3.footer-links-row
+                small Platform
+                ul
+                    li 
+                        a() About
+                    li 
+                        a() Platform
+                    li 
+                        a() Timeline
+                    li 
+    #tos
+        .container
+            small.subtitle 
+                span Copyright Veridium 2018
+            small.subtitle
+                span Created by&nbsp;
+                a(href='https://beaver.digital') BEAVE
+                a(href='https://www.getfractals.com') R

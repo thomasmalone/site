@@ -1,0 +1,35 @@
+include _header
+include _footer 
+include _mixins
+block vars
+block head
+body(class=type)
+    main(data-show-nav='false')
+        nav()
+            a#nav-logo(href='/')
+                //- small(style='color:red') Veridium
+                include ../assets/logo.svg
+            #mobile-trigger
+                .icon-menu
+            ul#menu-items(data-show-nav='false')
+                li 
+                    a(href='#about')
+                        button.tri.noborder Token Sale
+                li
+                    a(href='#whitepaper')
+                        button.tri.noborder Whitepaper
+                li
+                    a(href='#team')
+                        button.tri.noborder Team
+                li
+                    a(href='#desc')
+                        button.tri.noborder About Us
+                li
+                    a(href='#')
+                        button.tri.noborder Our History
+                li
+                    a(href='#')
+                        button.primary.noborder 
+                            span Join our Telegram
+        block content
++footer() 

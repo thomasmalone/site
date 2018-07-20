@@ -1,0 +1,98 @@
+@import '_vars';
+@import '_mixins';
+
+select {
+    height: 50px;
+    background: white;
+    border: 1px solid #90d4ff;
+}
+
+input {
+    padding: 1rem;
+    margin: 1rem .5rem;
+    background: #ffffff52;
+    border: 1px solid white;
+    border-radius: 5px;
+    color : white;
+    &::placeholder {
+        color: white
+    }
+}
+
+form {
+    position: relative;
+    label {
+      margin: 5px 0 0 5px;
+      font-size: 14px;
+      color: $color-font;
+    }
+    textarea { 
+        height: 150px;
+        &::placeholder { 
+            padding: .15rem!important 
+        } 
+    }
+    input, select, textarea {   
+        width: 100%; 
+        margin: 0 0 1rem;
+
+        border: 1px solid white;
+        background: rgba(255,255,255,.05);
+        padding: 0 1.5rem;
+        border-radius: 3px;
+        // height: 40px;
+        padding: 1rem;
+        color: #535783;
+        font-size: 14px;
+        &::placeholder {
+            font-size: 16px;
+            color: #ffffff54;
+            padding: 1rem 0;
+        }
+    }
+    &:not(.inline) > * {
+        &:not(:first-child) {
+            margin-top: 1rem 
+        }
+    }
+    &.inline {
+        @include flex();
+        @include align-items(stretch);
+        &.buttonInline {
+            input {
+            }
+            button {
+                box-shadow: initial;
+                position: absolute;
+                right: 0;
+                height: 80%;
+                top: 10%;
+                right: 5px;
+                width: 20%;
+                height: 70%;
+                top: 15%;
+                right: 10px;
+            }
+        }
+        > * {
+            margin: 0;
+            padding: 0px;
+            // height: 100%;
+        }
+        input {
+            border-radius: 3px 0 0 3px;
+            border-right: 0px;
+            padding: 0 1.5rem;
+        }
+        button {
+            border-radius: 0px 3px 3px 0px;
+            // padding: 0px 2rem;
+            // min-width: 100px;
+            // width: 30%; 
+        }
+    }
+    select {
+        option {
+        } 
+    }
+}  
