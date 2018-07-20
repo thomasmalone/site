@@ -10,7 +10,7 @@ append head
             "@context": "http://schema.org",
             "@type": "WebSite",  
             "url": "https://www.veridium.io/"
-        }   
+        }
     }) 
 block vars 
   - var type = 'index' 
@@ -24,58 +24,61 @@ block content
                 p Veridium is collaborating with IBM to transform how carbon credits work
             #hero-content 
                 #hero-content-inner
-                    small.subtitle Token buyer registration
-                    form.inline(action="")
-                        input(type="text")
-                        button() Submit
+                    #hero-content-inner-circle
+                        //- #hero-content-inner-svg-wrap
+                        //- include ./assets/hero-2.svg
+                        small.subtitle Token buyer registration
+                        form.inline(action="")
+                            input(type="text")
+                            button() Submit
     //- section#affiliates
         .container
-            hgroup
+            hgroup 
                 small.subtitle Our partners
             ul
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-IBM.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-stellar.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-KPMG.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-autonomos.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-blocktower.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-hosho.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-BKCM.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-ideacarbon.svg 
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-cbl.svg
                 li
-                    include ./assets/logo-forbes.svg 
+                    include ./assets/logo-infiniteearth.svg 
     section#about
         .container
             ul#about-art
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-IBM.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-stellar.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-KPMG.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-autonomos.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-blocktower.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-hosho.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-BKCM.svg
+                li 
+                    include ./assets/logo-ideacarbon.svg
                 li
-                    include ./assets/logo-forbes.svg
+                    include ./assets/logo-cbl.svg
                 li
-                    include ./assets/logo-forbes.svg
-                li
-                    include ./assets/logo-forbes.svg 
+                    include ./assets/logo-infiniteearth.svg
             #about-desc
                 hgroup
                     h2 Introducing Veridium
@@ -99,26 +102,29 @@ block content
                 ul#desc-list
                     li
                         h6 The problem
-                        p Carbon credits haven’t worked because they are illiquid, difficult to track, hard to calculate, lack transparency, and are not standardized.
+                        p.desc Carbon credits haven’t worked because they are illiquid, difficult to track, hard to calculate, lack transparency, and are not standardized.
                     li
                         h6 Our solution
-                        p Veridium makes carbon credit usage viable with the world’s first blockchain-based exchange and protocol.
+                        p.desc Veridium makes carbon credit usage viable with the world’s first blockchain-based exchange and protocol.
     section#ecosystem
         .container
-            hgroup
+            hgroup 
                 h2 Our ecosystem
                 p We are bringing to market the Veridium Exchange and EcoSmart protocol to facilitate our mission of creating a sustainable, carbon-neutral world.
             ul#ecosystem-list
                 li
-                    include ./assets/ecosystem-1.svg
-                    h6 Veridium Exchange
-                    p Veridium Exchange is the first tokenized exchange unleashing new liquidity and trading opportunities in carbon markets.
+                    .ecosystem-item
+                        include ./assets/ecosystem-1.svg
+                        h6 Veridium Exchange
+                        p Veridium Exchange is the first tokenized exchange unleashing new liquidity and trading opportunities in carbon markets.
                 li
-                    include ./assets/ecosystem-2.svg 
-                    h6 Ecosmart Protocol
-                    p EcoSmart is a protocol that allows companies to seamlessly offset the environmental impact of their activities.
+                    .ecosystem-item
+                        include ./assets/ecosystem-2.svg 
+                        h6 Ecosmart Protocol
+                        p EcoSmart is a protocol that allows companies to seamlessly offset the environmental impact of their activities.
     section#news
-        include ./assets/blob-news.svg
+        #news-svg-wrap
+            include ./assets/blob-news.svg
         .container
             hgroup
                 h2 In the press
@@ -266,34 +272,38 @@ block content
                 h2 Team
             ul#team-members 
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#todd')
+                    .team-member-img(data-modal-button='#todd')
+                        img(src='/static/team/Todd-Lemons.jpg' alt='')
                     .team-member-desc
                         h6  Tood Lemons
-                        p Chairman
+                        p.desc Chairman
                         .team-members-icons
                             .icon-linkedin
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#team-jim')
+                    .team-member-img
+                        img(src='/static/team/Jim-Procanik.jpg' alt='' data-modal-button='#team-jim')
                     .team-member-desc
                         h6 Jim Procanik
-                        p Executive Director
+                        p.desc Executive Director
                         .team-members-icons
                             .icon-linkedin
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#team-neslihan')
+                    .team-member-img
+                        img(src='/static/team/neslihan.jpg' alt='' data-modal-button='#team-neslihan')
                     .team-member-desc
                         h6 Neslihan Feradov
-                        p Director of Strategic Partnerships &amp; Marketing
+                        p.desc Director of Strategic Partnerships &amp; Marketing
                         .team-members-icons
                             .icon-linkedin
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='' data-modal-button='#team-michael')
+                    .team-member-img
+                        img(src='/static/team/Michael-Sofaer.jpg' alt='' data-modal-button='#team-michael')
                     .team-member-desc
                         h6 Michael Sofaer
-                        p Interim CTO
+                        p.desc Interim CTO
                         .team-members-icons
                             .icon-linkedin
                             .icon-github
@@ -303,75 +313,116 @@ block content
                 h2 Advisors
             ul#advisors-members
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-img
+                        img(src='/static/team/Brian-Kelly.jpg' alt='')
                     .team-member-desc
-                        p  Tood Lemons
-                        small.subtitle CEO / Co-founder 
+                        p  Brian Kelly
+                        small.subtitle Special Advisor / Financial Marketa
                         .team-members-icons
                             .icon-github
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')  
+                    .team-member-img
+                        img(src='/static/team/Jaron.jpg' alt='')  
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Jaron Lukasiewicz
+                        small.subtitle Advisory Board
                         .team-members-icons
                             .icon-github
                             .icon-github 
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-img
+                        img(src='/static/team/Hazem-Danny-Nakib.jpg' alt='')
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Hazem Danny Nakib
+                        small.subtitle Advisory Board
                         .team-members-icons
                             .icon-github
                             .icon-github
-                li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                li.team-member 
+                    .team-member-img 
+                        img(src='/static/team/Yo-Sub-Kwon.jpg' alt='')
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Yo Sub Kwon
+                        small.subtitle Advisory Board
                         .team-members-icons 
                             .icon-github
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-img
+                        img(src='/static/team/Yunsoo-Andre-Kim.jpg' alt='')
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Yunsoo Andre Kim 
+                        small.subtitle Advisory Board
                         .team-members-icons 
                             .icon-github
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-img
+                        img(src='/static/team/Alan-Laubsch.jpg' alt='')
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Alan Laubsch
+                        small.subtitle Advisory Board
                         .team-members-icons 
                             .icon-github 
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-img
+                        img(src='/static/team/Martijn-Wilder.jpg' alt='')
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Martijan Wilder
+                        small.subtitle Advisory Board
                         .team-members-icons 
                             .icon-github
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-img
+                        img(src='/static/team/Gerald-Prolman.jpg' alt='')
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Gerald Prolman
+                        small.subtitle Advisory Board
                         .team-members-icons 
                             .icon-github
                             .icon-github
                 li.team-member
-                    img(src='/static/img/team-kevin.jpg' alt='')
+                    .team-member-img
+                        img(src='/static/team/Scott-Massy.jpg' alt='')
                     .team-member-desc
-                        small.subtitle Todd Lemons
+                        p Dr. Scott Massy
+                        small.subtitle Advisory Board
                         .team-members-icons   
                             .icon-github 
                             .icon-github
+                //- li.team-member
+                //-     img(src='/static/team/Lawrence-Dunn.jpg' alt='')
+                //-     .team-member-desc
+                //-         p Lawrence Dunn
+                //-         small.subtitle Advisory Board
+                //-         .team-members-icons 
+                //-             .icon-github
+                //-             .icon-github
+                //- li.team-member
+                //-     img(src='/static/team/SM-Profile-Pic.jpg' alt='')
+                //-     .team-member-desc
+                //-         p Shandy Modi
+                //-         small.subtitle Advisory Board
+                //-         .team-members-icons 
+                //-             .icon-github
+                //-             .icon-github
+                //- li.team-member
+                //-     img(src='/static/team/Joel-T.jpg' alt='')
+                //-     .team-member-desc
+                //-         p Joel Telpner
+                //-         small.subtitle Advisory Board
+                //-         .team-members-icons   
+                //-             .icon-github 
+                //-             .icon-github
     section#extended
         //- include ./assets/blob-top.svg
         //- include ./assets/blob-bottom.svg
         .container
             #extended-content 
-                #extended-content-main
+                #extended-content-main 
                     hgroup
                         h2 Our carbon mission
                         p "Carbon credits are issued only after emissions reductions have been verified by internationally-recognized third party auditors. They are consequently the most viable market-based solution to a sustainable economy."
@@ -379,21 +430,21 @@ block content
                 #extended-content-aside
                     .extended-article
                         //- small.subtitle News article 1
-                        p Carbon credits reduce our CO2 emissions 
+                        p.desc Carbon credits reduce our CO2 emissions 
                     .extended-article
                         //- small.subtitle News article 1
-                        p Carbon credits protect rainforests
+                        p.desc Carbon credits protect rainforests
                     .extended-article
                         //- small.subtitle News article 1
-                        p Carbon credits are increasingly required by governments
+                        p.desc Carbon credits are increasingly required by governments
                     .extended-article
                         //- small.subtitle News article 1
-                        p Carbon credits help companies offset CO2 emissions
+                        p.desc Carbon credits help companies offset CO2 emissions
     section#whitepaper
         .container
             #whitepaper-content 
-                #whitepaper-content-main
-                    hgroup
+                #whitepaper-content-main 
+                    hgroup 
                         h2 Read our whitepaper
                         p Understand why Veridium is a solution to the world’s biggest problem.
                     hr

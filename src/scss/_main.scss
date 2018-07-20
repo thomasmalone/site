@@ -334,7 +334,8 @@ p {
     font-size: 1rem;
     line-height: 24px;
     font-weight: 100;
-    color: desaturate(lighten($color-1, 40), 20);
+    color: #2d3b43;
+    letter-spacing: 1px;
     &.desc {
         font-size: 15px;
         line-height: 24px;

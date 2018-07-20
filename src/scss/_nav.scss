@@ -10,54 +10,59 @@ main {
         transition: all .25s linear;
         
     }
-    nav {
-        svg {
-            width: 120px
-        }
-        width: 100%;
-        position: absolute;
-        padding: 2rem 2rem 0;
-        transition: all .25s linear;
-        z-index: 1000;
-        @include flex();
-        @include justify-content(space-between);
-        #nav-logo {
+    #nav-wrap {
+        max-width: 1440px;
+        position: relative;
+        margin: 0 auto;
+        nav {
+            svg {
+                width: 120px
+            }
+            width: 100%;
+            position: absolute;
+            padding: 2rem 2rem 0;
+            transition: all .25s linear;
+            z-index: 1000;
             @include flex();
-            @include align-items(center);
-            width: 120px;
-        }
-        * {
-            font-size: 12px;
-        }
-        &.hide { 
-            left: -240px
-        }
-        &.show {
-            width: 300px;
-            @include flex-child(0 1 auto); 
-        }
-        #mobile-trigger {
-            display: none
-        }
-        ul#menu-items {
-            transition: all .35s linear;
-            >:last-child {
-                button {
+            @include justify-content(space-between);
+            #nav-logo {
+                @include flex();
+                @include align-items(center);
+                width: 120px;
+            }
+            * {
+                font-size: 12px;
+            }
+            &.hide { 
+                left: -240px
+            }
+            &.show {
+                width: 300px;
+                @include flex-child(0 1 auto); 
+            }
+            #mobile-trigger {
+                // display: none
+            }
+            ul#menu-items {
+                transition: all .35s linear;
+                >:last-child {
+                    button {
+                    }
+                }
+                li {
+                    a, button {
+                        // color: inherit;
+                    }
                 }
             }
-            li {
-                a, button {
-                    // color: inherit;
-                }
+        }
+        &[data-nav-minified=true] {
+            nav {
             }
         }
-    }
-    &[data-nav-minified=true] {
-        nav {
-        }
-    }
-    &:not([data-nav-minified=true]) {
-        nav {
+        &:not([data-nav-minified=true]) {
+            nav {
+            }
         }
     }
 }
@@ -90,6 +95,7 @@ main {
             }
         }
         ul#menu-items {
+            @include darkContainer();
         }
     }
 }
@@ -98,6 +104,9 @@ main {
     nav {
         #menu-items {
             @include flex();
+        }
+        #mobile-trigger {
+            display: none
         }
     }
 }

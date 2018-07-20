@@ -1,15 +1,15 @@
-footer {
-  margin-top: 25rem;
+footer {    
+  padding: 4rem 0 20rem;
   position: relative;
   @include darkContainer();
   #footer-svg-wrap {
     margin: 0 auto;
     svg {
       bottom: 0;
-      width: 1440px;
+      width: 940px;
       position: absolute;
-      transform: scale(3);
       transform-origin: bottom;
+      transform: scale(3) translateY(1px);
     }
   }
   #footer-container-newsletter {
@@ -132,6 +132,7 @@ footer {
     #footer-svg-wrap {
       width: 1275px;
       svg {    
+        width: 1440px;
         transform: scale(2.4) translateY(2px);
         transform-origin: 50% 100%;
       }
@@ -184,6 +185,14 @@ footer {
       >:nth-child(2) {
         @include justify-content(flex-end)
       }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    * {
+      text-align: center;
     }
   }
 }
