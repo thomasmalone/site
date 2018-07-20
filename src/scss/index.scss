@@ -21,36 +21,20 @@
     :root {
         --container-padding: 6rem 1rem;
         --descTranslation: translateX(calc(100vw - 1440px));
-        --heroTranslation: translateX(calc(100vw - 1100px));
     }
 }
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 768px) {
     :root {
-        --heroTranslation: translateX(calc(100vw - 1200px)); 
-    } 
-}
-@media screen and (min-width: 1000px) {
-    :root {
-        --heroTranslation: translateX(calc(100vw - 1860px)); 
+        --heroTranslation: translateX(calc(50vw - 660px));;
     }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 1440px) {
     :root {
-        --heroTranslation: translateX(calc(100vw - 1940px)); 
-    }
-}
-@media screen and (min-width: 1300px) {
-    :root {
-        --heroTranslation: translateX(calc(100vw - 2040px))
-    }
-}
-@media screen and (min-width: 1400px) {
-    :root {
-        --heroTranslation: translateX(calc(100vw - 2040px))
+        --heroTranslation: translateX(0px)
     }
 }
 
-html {
+html {  
     background: #eff9ff;
 }
 
@@ -84,6 +68,7 @@ section {
         margin: 0 auto;
         position: relative;
         max-width: 1440px;
+        transform: var(--heroTranslation);
         svg {
             transform: scale(2);
             transform-origin: 50% 10%;
@@ -154,7 +139,8 @@ section {
         #hero-svg-1 {
             top: 0;
             width: 1440px;
-            transform: translateX(calc(50vw - 660px));
+            position: absolute;
+            transform: translateX(calc(50vw + -700px));
             svg {    
                 transform: scale(1.5);
                 transform-origin: 97% 9%;
@@ -180,7 +166,7 @@ section {
                     svg {
                         width: 1528px;
                         transform-origin: initial;
-                        transform: var(--heroTranslation);
+                        // transform: var(--heroTranslation);
                     } 
                 } 
             }
