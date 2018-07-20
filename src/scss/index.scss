@@ -141,11 +141,14 @@ section {
 @media (min-width: 768px) {
     #hero {
         #hero-svg-1 {
-            svg {
-                transform: translateX(calc(50vw - 1400px));
-                transform-origin: 100% 20%;
+            width: 1440px;
+            margin: 0 auto;
+            position: relative;
+            svg {    
+                transform: scale(1.8);
+                transform-origin: 57% 25%;
                 position: absolute;
-                width: 1400px; 
+                width: 100%;
             }
         }
         .container {
@@ -220,12 +223,26 @@ section {
 #about {
     padding: 0rem 0 4rem;
     .container {
-        max-width: 700px;
+        @include flex();
+        > * {
+            @include flex-child(1);
+        }
+        #about-art {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 40px;
+            align-items: center;
+            li {
+                svg {
+                    max-width: 120px;
+                }
+            }
+        }
     }
 }
 @media (min-width: 768px) {
     #about {
-        padding: 4rem 0 18rem;
+        padding: 21rem 0 15rem;
         .container {
 
         }
@@ -321,7 +338,7 @@ section {
         #ecosystem-list {
             display: grid;
             grid-template-rows: 1fr 1fr;
-            grid-gap: 50px;
+            grid-row-gap: 50px;
             >:nth-child(1) {
                 svg {
                     // transform: translateX(-50px)
@@ -334,6 +351,7 @@ section {
                 }
             }
             li {
+                max-width: 448px;
                 text-align: center;
                 small {                    
                     margin-bottom: 1rem;
@@ -344,7 +362,7 @@ section {
                 }
                 p {
                     max-width: 400px;
-                    margin: 1rem auto 0;
+                    margin: 1rem auto 0; 
                 }
             }
         }
@@ -354,12 +372,13 @@ section {
     #ecosystem {
         margin-top: 14rem;
         .container {
+            max-width: 960px;
             #ecosystem-list {
                 grid-template-columns: 1fr 1fr;
                 grid-template-rows: auto;
                 li {
                     svg {
-                        height: 560px;
+                        height: 380px;
                     }
                 }
             }
@@ -375,7 +394,7 @@ section {
         transform: scale(4.5);
         transform-origin: 50% 50%;
     } 
-    .container {
+    .container { 
         hgroup {
             @include darkContainer();       
             margin: 0 auto;
@@ -395,6 +414,9 @@ section {
                 border-radius: 5px;
                 background: white;
                 box-shadow: 0px 20px 50px -10px #23224161;
+                p {
+                    height: 128px;
+                }
                 .news-article-desc {
                     padding: 1rem;
                     margin: 2rem 1rem 0;

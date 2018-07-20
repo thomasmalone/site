@@ -18,11 +18,9 @@ block content
     section#hero   
         #hero-svg-1
             include ./assets/hero.svg
-        #hero-svg-2
-            include ./assets/hero-2.svg
         .container   
             hgroup#hero-title
-                h1 Seamlessly reduce the world’s carbon footprint
+                h1 Seamlessly reduce the world’s carbon footprint 
                 p Veridium is collaborating with IBM to transform how carbon credits work
             #hero-content 
                 #hero-content-inner
@@ -30,7 +28,7 @@ block content
                     form.inline(action="")
                         input(type="text")
                         button() Submit
-    section#affiliates
+    //- section#affiliates
         .container
             hgroup
                 small.subtitle Our partners
@@ -57,14 +55,36 @@ block content
                     include ./assets/logo-forbes.svg 
     section#about
         .container
-            hgroup
-                h2 Introducing Veridium
-                p Veridium is a collaborative initiative to create a regenerative economy that sustains our planet’s natural resources and reduces carbon emissions.
-                p The system we’re building turns industry-standard carbon offsets into freely tradeable tokenized assets. With our partners, we are creating a marketplace that will automate the corporate carbon credit accounting and offsetting process across global supply chains.
+            ul#about-art
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg
+                li
+                    include ./assets/logo-forbes.svg 
+            #about-desc
+                hgroup
+                    h2 Introducing Veridium
+                    p Veridium is a collaborative initiative to create a regenerative economy that sustains our planet’s natural resources and reduces carbon emissions.
+                    p The system we’re building turns industry-standard carbon offsets into freely tradeable tokenized assets. With our partners, we are creating a marketplace that will automate the corporate carbon credit accounting and offsetting process across global supply chains.
 
-            .btn-group
-                button.primary Join Token Sale
-                button.secondary View Case Study
+                .btn-group
+                    button.primary Join Token Sale
+                    button.secondary View Case Study
     section#desc
         .container  
             #desc-art   
